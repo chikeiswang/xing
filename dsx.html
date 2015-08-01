@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html ng-app>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>mcsy</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/mcsy.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="mcsybg">
+        <svg width='750' height='1330'>
+            <!-- 镜头 -->
+            <g>
+                <defs>
+                    <path id="Camera1" d="M 324 44 
+                         C 324 42 325 41 327 41 
+                         L 421 41
+                         C 423 41 424 42 424 44
+                         L 424 88
+                         C 424 88 424 131 374 131 
+                         C 374 131 324 131 324 88
+                         L 324 44 Z" />
+                </defs>
+                <use xlink:href="#Camera1" fill="rgb(208,232,255)" />
+                <defs>
+                    <path id="Camera2" d="M 374 53 
+                         C 374 53 340 53 340 86 
+                         C 340 86 340 120 374 120
+                       " />
+                </defs>
+                <use xlink:href="#Camera2" fill="rgb(149,165,166)" />
+                <defs>
+                    <path id="Camera3" d="M 374 53 
+                         C 374 53 407 53 407 86 
+                         C 407 86 407 120 374 120
+                       " />
+                </defs>
+                <use xlink:href="#Camera3" fill="rgb(189,195,199)" />
+                <circle cx="374" cy="90" r="17" fill="#666" style="opacity:0.6" />
+                <circle cx="374" cy="87" r="16" fill="rgb(255,255,255)" />
+                <circle cx="374" cy="87" r="12.5" fill="rgb(44,61,79)" />
+                <circle cx="371" cy="80" r="3.5" fill="rgb(255,255,255)" />
+                <circle cx="374" cy="87" r="3.5" fill="rgb(52,172,251)" />
+            </g>
+            <g id="sun">
+                <defs>
+                    <radialGradient id="grey_blue" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:rgb(253,241,98);" />
+                        <stop offset="100%" style="stop-color:rgb(254,248,159);" />
+                    </radialGradient>
+                </defs>
+                <g class="animated fadeInUp">
+                    <circle cx="567" cy="223" r="65" stroke="rgb(251,255,191)" stroke-width="13" />
+                    <circle cx="567" cy="223" r="65" rx="110" ry="100" style="fill:url(#grey_blue)" />
+                    <polyline points="564,149 570,149 567,127 564,149" fill="rgb(248,254,164)" />
+                    <polyline points="583,151 589,153 590,138 583,151" fill="rgb(255,237,53)" />
+                    <polyline points="600,158 606 161 614,141 600,158" fill="rgb(248,254,164)" />
+                    <polyline points="617,170 620,173 629,161 617,170" fill="rgb(255,237,53)" />
+                    <polyline points="630,184 633,189 649,175 630,184" fill="rgb(248,254,164)" />
+                    <polyline points="653,200 639,202 640,206 653,200" fill="rgb(255,237,53)" />
+                    <polyline points="642,221 642,226 663,223 642,221" fill="rgb(248,254,164)" />
+                    <polyline points="653,200 639,202 640,206 653,200" fill="rgb(248,254,164)" />
+                    <polyline points="640,240 639,244 652,246 640,240" fill="rgb(255,237,53)" />
+                    <polyline points="633,258 630,263 647,270 633,258" fill="rgb(248,254,164)" />
+                    <polyline points="622,274 619,277 629,284 622,274" fill="rgb(255,237,53)" />
+                    <polyline points="607,286 602,289 614,303 607,286" fill="rgb(248,254,164)" />
+                    <polyline points="589,294 585,295 590,307 589,294" fill="rgb(255,237,53)" />
+                    <polyline points="570,297 564,297 567,315 570,297" fill="rgb(248,254,164)" />
+                    <polyline points="550,295 546,294 544,307 550,295" fill="rgb(255,237,53)" />
+                    <polyline points="532,288 527,286 520,303 532,288" fill="rgb(248,254,164)" />
+                    <polyline points="516,277 512,274 505,284 516,277" fill="rgb(255,237,53)" />
+                    <polyline points="504,263 500,258 486,270 504,263" fill="rgb(248,254,164)" />
+                    <polyline points="495,244 494,240 482,246 495,244" fill="rgb(255,237,53)" />
+                    <polyline points="491,226 491,221 473,224 491,226" fill="rgb(248,254,164)" />
+                    <polyline points="494,206 495,202 481,200 494,206" fill="rgb(255,237,53)" />
+                    <polyline points="500,188 503,183 486,176 500,188" fill="rgb(248,254,164)" />
+                    <polyline points="495,244 494,240 482,246 495,244" fill="rgb(255,237,53)" />
+                    <polyline points="512,172 515,169 505,162 512,172" fill="rgb(248,254,164)" />
+                    <polyline points="527,160 532,157 520,143 527,160" fill="rgb(248,254,164)" />
+                    <polyline points="512,172 515,169 505,162 512,172" fill="rgb(248,254,164)" />
+                    <polyline points="495,244 494,240 482,246 495,244" fill="rgb(255,237,53)" />
+                    <polyline points="512,172 515,169 505,162 512,172" fill="rgb(255,237,53)" />
+                    <polyline points="544,139 545,153 550,151 544,139" fill="rgb(255,237,53)" />
+                </g>
+                <animateTransform attributeName="transform" begin="0s" dur="30s" type="rotate" from="0 567 223" to="360 567 223" repeatCount="indefinite" />
+            </g>
+            <path d='M185 780
+                  C 185 739 240 685 290 671
+                  C 292 649 308 620 368 597
+                  C 349 505 469 433 551 480
+                  C 560 450 590 447 627 450
+                  C 639 380 716 390 759 390
+                  C 1050 785 512 1028 185 780' fill='#d3ebff'>
+            </path>
+            <g id="cloud">
+                <g class="animated fadeInLeft">
+                    <path d='M404 290
+                    C 400 275 413 257 426 255
+                    C 419 220 461 211 480 232
+                    C 492 214 518 238 507 248
+                    C 520 241 524 262 520 267
+                    C 532 272 535 284 533 291' fill='rgba(233,245,255,0.8)'>
+                    </path>
+                </g>
+                <animateTransform attributeName="transform" type="translate" from="-534 0" to="346 0" begin="0s" dur="30s" repeatCount="indefinite" />
+            </g>
+            <polyline points='0 749 
+                        31 774 
+                        145 746 
+                        232 803
+                        326 747
+                        340 773
+                        345 770
+                        372 781
+                        385 781
+                        397 796
+                        466 772
+                        494 768
+                        494 772
+                        504 768
+                        519 773
+                        566 796
+                        586 776
+                        632 740
+                        635 744
+                        664 705
+                        668 707
+                        668 694
+                        750 748
+                        681 707
+                        723 836
+                        665 860
+                        621 824
+                        506 776
+                        513 886
+                        513 886
+                        403 807
+                        411 875
+                        346 818
+                        291 863
+                        150 754
+                        153 806
+                        97 836
+                        47 790
+                        0 822' fill='#82b4e3'>
+            </polyline>
+            <polyline points='0 822
+                        47 790
+                        97 836
+                        153 806
+                        150 754
+                        243 826
+                        291 863
+                        346 818
+                        411 875
+                        403 807
+                        513 886
+                        513 886
+                        506 776
+                        621 824
+                        665 860
+                        723 836
+                        681 707
+                        750 748
+                        750 1031
+                        0 1031' fill='#5a8ebf'>
+            </polyline>
+            <polyline points='326 747
+                        340 773
+                        345 770
+                        372 781
+                        326 747' fill='#5a8ebf'>
+            </polyline>
+            <polyline points='466 772
+                        494 768
+                        494 772
+                        504 768
+                        521 775
+                        496 762
+                        466 772' fill='#5a8ebf'>
+            </polyline>
+            <polyline points='586 776
+                        632 740
+                        635 744
+                        664 705
+                        668 707
+                        668 694
+                        586 776' fill='#5a8ebf'>
+            </polyline>
+            <g class="animated rotateInUpLeft">
+                <path id='grass1' d='M -300 1100
+                C 80 703 100 703 1250 1213' fill='#d9ea31'>
+                </path>
+            </g>
+            <g class="animated fadeInRight">
+                <path id='grass2' d='M 0 1213
+                C 220 700 900 800 1100 1200' fill='#c8dc58'>
+                </path>
+            </g>
+            <g class="animated rotateInUpLeft">
+                <path id='grass3' d='M -400 1218
+                C 88 900 88 900 700 1213' fill='#8bb635'>
+                </path>
+            </g>
+            <g class="animated fadeInRight">
+                <path id='grass4' d='M 0 1218
+                C 400 980 482 980 800 1213' fill='#a7c93f'>
+                </path>
+            </g>
+            <g class="animated swing">
+                <polyline points="599,781 605,781 605,795 599,795 599,781" fill="rgb(97,63,29)" />
+                <polyline points="581,829 585,802 621,783 656,802 661,829 657,829 653,804 621,786 590,804 585,829" fill="rgb(97,63,29)" />
+                <polyline points="585,829
+                        585,879
+                        657,879
+                        657,829
+                        653,804
+                        621,786
+                        590,804
+                        585,829" fill="rgb(140,98,56)" />
+                <polyline points="621,879
+                        657,879
+                        657,829
+                        653,805
+                        621,786
+                        621,879" fill="rgb(117,80,37)" />
+                <polyline points="608,808
+                        617,808
+                        617,822
+                        608,822                        
+                        608,808" fill="rgb(255,255,255)" />
+                <polyline points="609,809
+                        616,809
+                        616,821
+                        609,821                        
+                        609,808" fill="rgb(117,80,37)" />
+                <polyline points="626,808
+                        635,808
+                        635,822
+                        626,822                        
+                        626,808" fill="rgb(255,255,255)" />
+                <polyline points="627,809
+                        634,809
+                        634,821
+                        627,821                        
+                        627,809" fill="rgb(117,80,37)" />
+                <polyline points="597,839
+                        616,839
+                        616,869
+                        597,869                        
+                        597,869" fill="rgb(255,255,255)" />
+                <polyline points="599,841
+                        614,841
+                        614,867
+                        599,867                        
+                        599,869" fill="rgb(117,80,37)" />
+                <polyline points="626,839
+                        645,839
+                        645,869
+                        626,869                        
+                        626,839" fill="rgb(255,255,255)" />
+                <polyline points="628,867
+                        628,841
+                        643,841
+                        643,867                        
+                        628,867" fill="rgb(117,80,37)" />
+                <polyline points="599,841 614,867" stroke="rgb(255,255,255)" stroke-width="2" />
+                <polyline points="599,867 614,841" stroke="rgb(255,255,255)" stroke-width="2" />
+                <polyline points="628,841 643,867" stroke="rgb(255,255,255)" stroke-width="2" />
+                <polyline points="643,841 628,867" stroke="rgb(255,255,255)" stroke-width="2" />
+            </g>
+            <ellipse cx="563" cy="750" rx="19" ry="9" style="fill:rgba(247,186,95,0.8)" />
+            <ellipse cx="595" cy="770" rx="10" ry="5" style="fill:rgba(247,186,95,0.5)" />
+            <g>
+                <text fill="white" font-size="25">
+                    <tspan x="53" y="150" style="opacity:0.7; filter:alpah(opacity:60)">羊只总数</tspan>
+                    <tspan x="53" y="280" font-size="120" style="text-shadow:1px 1px 1px #8db3d5" ng-controller="customersController">
+                        <tspan ng-repeat="i in counts">{{i.Counts}}</tspan>
+                    </tspan>
+                    <tspan>只</tspan>
+                </text>
+                <text x="53" y="340" fill="white" font-size="25" style="opacity:0.7; filter:alpah(opacity:60)">第25期</text>
+                <rect x='32' y='356' width='199' height='72' rx='34' ry='34' fill='#8cb1d5'>
+                </rect>
+                <rect x='32' y='354' width='199' height='72' rx='34' ry='34' fill='#aed6f2'>
+                </rect>
+                <image x="52" y="370" width="40" height="40" xlink:href="images/pie.png"></image>
+                <text x="122" y="390" fill="white" style="text-shadow:2px 1px 1px #8db3d5 ;">
+                    <tspan font-size="30">70%</tspan>
+                    <tspan x="112" y="414" font-size="20">成长状态</tspan>
+                </text>
+            </g>
+            <g>
+                <rect x='32' y='457' width='199' height='72' rx='34' ry='34' fill='#8cb1d5'>
+                </rect>
+                <rect x='32' y='455' width='199' height='72' rx='34' ry='34' fill='#aed6f2'>
+                </rect>
+                <image x="52" y="470" width="35" height="47" xlink:href="images/pie2.png"></image>
+                <text x="112" y="485" fill="white" style="text-shadow:2px 1px 1px #8db3d5;">
+                    <tspan font-size="26">116.67</tspan>
+                    <tspan x="113" y="515" font-size="20">收益情况</tspan>
+                </text>
+                <image x="72" y="605" width="46" height="41" xlink:href="images/cs.png"></image>
+                <path d="M57,600 v110" stroke="white"></path>
+                <text fill="white">
+                    <tspan x="55" y="585" font-size="30">巴彦淖尔></tspan>
+                    <tspan x="135" y="640" font-size="40">18°C</tspan>
+                    <tspan x="72" y="675" font-size="19">舍内温度22.8℃</tspan>
+                    <tspan x="82" y="705" font-size="19">舍内湿度18%</tspan>
+                </text>
+            </g>
+            <g class="animated fadeInUp">
+                <g class="tree-1">
+                    <path d="M101,1140 A23,30 0 0 1 102,1070 " fill="#aac828" />
+                    <path d="M101,1140 A23,30 0 0 0 102,1070 z" fill="#86a526" />
+                    <polygon points="100,1115 104,1115 106,1161 98,1161" fill="#774e23" />
+                </g>
+                <g class="tree-2" transform="translate(-50,-177)">
+                    <path d="M101,1140 A25,30 0 0 1 102,1060 " fill="#aac828" />
+                    <path d="M101,1140 A25,30 0 0 0 102,1060 z" fill="#86a526" />
+                    <polygon points="100,1115 104,1115 106,1161 98,1161" fill="#774e23" />
+                </g>
+                <g class="tree-3">
+                    <polygon points="670,1010 655,1100 670,1100 671,1010" fill="#aac828" />
+                    <polygon points="670,1010 685,1100 670,1100 671,1010" fill="#86a526" />
+                    <polygon points="667,1080 672,1080 674,1130 665,1130 667,1080" fill="#774e23" />
+                </g>
+                <g class="tree-4" transform="translate(600,-267)">
+                    <path d="M101,1140 A13,20 0 0 1 102,1080 " fill="#aac828" />
+                    <path d="M101,1140 A13,20 0 0 0 102,1080 " fill="#86a526" />
+                    <polygon points="100,1120 104,1120 106,1161 98,1161" fill="#774e23" />
+                </g>
+                <g class="tree-5" transform="translate(-567,-311)">
+                    <polygon points="670,1070 660,1120 670,1120 671,1070" fill="#aac828" />
+                    <polygon points="670,1070 680,1120 670,1120 671,1070" fill="#86a526" />
+                    <polygon points="668,1100 673,1100 675,1130 667,1130 669,1100" fill="#774e23" />
+                </g>
+                <g class="tree-6">
+                    <path d='M 107 915 C 107,905 77,973 107,970' fill='#aac828' />
+                    <path d='M 107 915 C 107,905 137,973 107,970' fill='#86a526' />
+                    <polygon points="105,955 109,955 111,980 105,980" fill="#774e23" />
+                </g>
+                <g class="tree-7" transform="translate(90,-160)">
+                    <path d='M 107 915 C 107,905 77,973 107,970' fill='#aac828' />
+                    <path d='M 107 915 C 107,905 137,973 107,970' fill='#86a526' />
+                    <polygon points="105,955 109,955 111,980 105,980" fill="#774e23" />
+                </g>
+            </g>
+            <g id="sheepone">
+                <!--  <image width="46" height="41" xlink:href="images/mcyang.png"></image> -->
+                <g>
+                </g>
+                <animateMotion path="M174,869 C 174,869 253,953 336,987
+                              C 462,961 560,930 654,930" begin="0s" dur="10s" rotate="auto" repeatCount="indefinite" />
+            </g>
+            <path d="M174,869 C 174,869 253,953 336,987
+                              C 462,961 560,930 654,930" stroke="#cd0000" stroke-width="2" fill="none" />
+        </svg>
+        <img class="footer" src="images/mcsy.jpg">
+        <!--  <div class="yang">
+            <img class="y1" src="images/mcyang.png">
+            <img class="y2" src="images/mcyang.png">
+            <img class="y3" src="images/touzuo_03.png">
+            <img class="y4" src="images/touzuo_03.png">
+            <img class="y5" src="images/touzuo_03.png">
+            <img class="y6" src="images/touzuo_03.png">
+            <img class="y7" src="images/touzuo_03.png">
+        </div> -->
+        <div class="how">
+            <p>第30期</p>
+            <p>立即抢购</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/mcsy.js"></script>
+    
+    <script src="http://apps.bdimg.com/libs/angular.js/1.2.15/angular.min.js"></script>
+</body>
+
+</html>
